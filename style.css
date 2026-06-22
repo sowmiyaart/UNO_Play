@@ -1,0 +1,397 @@
+*{
+    text-align: center;
+    /* outline: 2px solid black; */
+}
+body{
+    background-image: url("./assets/home.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    overflow-x:hidden;
+    margin: 0;
+}
+#home{
+    display: grid;
+    gap: 2px;
+    grid-template-rows: 1fr 2fr 1fr;
+}
+#header ,.main,#footerIcons,#team{
+    display: flex;
+    width: 100%;
+    height:max-content;
+    justify-content: space-around;
+}
+.main{
+    align-items: center;
+}
+#header{
+    margin-top: 1%;
+}
+.icon{
+    background-color: rgb(22, 41, 207);
+    padding: 0%;
+    height: fit-content;
+    border-radius: 10px;
+}   
+.text,#cMode{
+    padding: 12px 10px 5px;
+    margin: 0%;
+    color: white;
+    font-weight: bolder;
+    font-size: larger;
+}
+#coinPic,#diamondPic,#plus,#bankPic{
+    font-size: 30px;
+    padding: 0%;
+    color: rgb(253, 236, 0);
+    background-color: rgba(218, 165, 32, 0.37);
+    border-radius: 10px;
+
+}
+#plus,#backArr{
+    font-size: 30px;
+    padding-bottom: 0%;
+}
+.card{
+    height: 300px;
+    width: 200px;
+    border: 2px solid white;
+    transition: transform 0.3s ease;
+}
+.card:hover{
+    transform: scale(0.8);
+}
+#footerIcons,#name,#backArr,#footHigh{
+    color: gold;
+}
+#name{
+    width: 10%;
+    margin-left: 0%;
+    height: fit-content;
+    border: 1px solid black;
+}
+#footerIcons>div{
+    height: fit-content;
+    margin-bottom: 1%;
+    padding: 0%;
+}
+.footer{
+    font-size: 40px;
+    margin-bottom: 0%;
+}
+h4{
+    font-size: small;
+    padding: 1%;
+    margin-bottom: 0%;
+}
+.set{
+    margin-left: 2%;
+}
+.str{
+    margin-right: 2%;
+}
+#msg{
+    width: 30px;
+    height: 60px;
+}
+#msgPic,#footQuick{
+    font-size: x-large;
+    color: white;
+}
+.classic,.room{
+    height: 280px;
+}
+#pass{
+    width: 15%;
+    padding: 15px;
+}
+#profile,.dp,.extra,.avatar>div,#unoBTN{
+    background-color: red;
+    width: 70px;
+    height: 70px;
+    margin: auto 1%;
+    border-radius: 5px;
+}
+#pass,#name,.card{
+    background-color: blue;
+    border-radius: 18px;
+}
+#headDiv{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+#player{
+    height: fit-content;
+    width: 14%;
+    justify-content: space-between;
+}
+#player>span>div,.start{
+    font-size: x-large;
+    font-weight: bolder;
+    
+}
+#player>span>i,#name>h3{
+    font-size: xx-large;
+}
+.first{
+    margin-left: 5%;
+}
+.last{
+    margin-right: 5%;
+}
+.classical{
+    flex-shrink: 0;
+}
+#footerIcons{
+    height: 100%;
+    align-items: flex-end;
+}
+.join{
+    width: 60%;
+    display: flex;
+    justify-content: space-between;
+}
+.mode{
+    overflow-y: auto;
+    overflow-x: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+.mode::-webkit-scrollbar {
+    display: none;             
+}
+#foot{
+    justify-content: flex-end;
+    align-items: flex-end;
+}
+#footHigh,#footQuick{
+    display: inline;
+    padding: 5px;
+    width: 30%;
+    margin: 1%;
+    border-radius: 10px;
+}
+#footHigh{
+    font-size: x-large;
+}
+#footQuick{
+    background-color: rgb(255, 190, 26);
+    color: white;
+    font-weight: bolder;
+    border: 1px solid white;
+    box-shadow: 0 4px 0 0 rgb(158, 116, 10);
+}
+#opponentDiv{
+    margin-top: 3%;
+}
+#opponentDiv>h2,#team>span>h1{
+    color: white;
+}
+#team{
+    justify-content: space-around;
+    margin: auto;
+    width: 80%;
+}
+.extra{
+    display: inline-block;
+}
+.start{
+    background-color: green;
+    color: white;
+    width: 10%;
+    padding: 5px;
+    margin: auto;
+    border-radius: 10px;
+    border: 1px  solid black;
+}
+.avatar{
+    width: fit-content;
+    height: fit-content;
+}
+.deck{
+    display: flex;
+    width: 50%;
+    height: 100%;
+}
+#topPlayer,#middlePlayer,#bottomPlayer{
+    display: flex;
+    justify-content: space-around;
+}
+#middlePlayer{
+    width: 100%;
+    height: 100%;
+}
+#centerPart,#leftPlayer,#rightPlayer{
+    display: flex;
+    justify-content: space-between;
+    width: 20%;
+    height: 80%;
+}
+#centerPart{
+    align-items: center;
+}
+#gamePage{
+    flex-direction: column;
+    height: 100vh;
+    margin: auto;
+}
+.playCard,.discardChild{
+    width: 85px;
+    height: 128px;
+    background-color: red;
+    background-image: url("./assets/cards.png");
+    background-repeat: no-repeat;
+    flex-shrink: 0;
+    border-radius: 19px;
+    border: 2px solid white;
+}
+.playCard:not(:first-child){
+    margin-left: -40px;
+}
+.playCard:hover{
+    transform: translateY(-15px) scale(1.1);
+}
+#leftPlayer .playCard{
+    transform: rotate(90deg);
+}
+#rightPlayer .playCard{
+    transform: rotate(-90deg);
+}
+#leftPlayer .deck,#rightPlayer .deck{
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    height: 300px;
+}
+#leftPlayer .playCard:not(:first-child),#rightPlayer .playCard:not(:first-child){
+    margin-top: -90px;
+    margin-left: 0;
+}
+#colorPick{
+    position: fixed;
+    flex-wrap: wrap;
+    width: 220px;
+    height: 220px;
+    z-index: 1000;
+}
+#colorPick>div{
+    border: 2px solid black;
+    border-radius: 50%;
+    width: 40%;
+    height: 40%;
+    cursor: pointer;
+}
+#red{
+    background-color: red;
+}
+#green{
+    background-color: green;
+}
+#yellow{
+    background-color: yellow;
+}
+#blue{
+    background-color: blue;
+}
+#drawDeck{
+    width: 85px;
+    height: 128px;
+    background-image: url("./assets/uno_back.jpg");
+    background-size: 100% 100%;
+}
+.classic{
+    background-image: url("./assets/classic.png");
+    background-size: 100% 100%;
+}
+.wild{
+    background-image: url("./assets/gowild.png");
+    background-size: 100% 100%;
+}
+.pack{
+    background-image: url("./assets/funpack.png");
+    background-size: 100% 100%;
+}
+.contest{
+    background-image: url("./assets/contest.png");
+    background-size: 100% 100%;
+}
+.room{
+    background-image: url("./assets/playfrnds.png");
+    background-size: 100% 100%;
+}
+#team>div>h3{
+    color: white;
+    background-color: rgba(4, 4, 138, 0.705);
+    padding: 2%;
+    border-radius: 15px;
+}
+#team>div>h1,#pass>h3{
+    color: yellow;
+}
+#team>div{
+    width: 16%;
+}
+.dp,.avatar>div{
+    margin: auto;
+}
+.play,.avatar>h3,#msg{
+    background-color: rgb(0, 153, 255);
+    padding: 2%;
+    border-radius: 10px;
+}
+#msg{
+    padding: 0%;
+}
+.play>i{
+    color: wheat;
+}
+.classical{
+    background-image: url("./assets/modes.jpg");
+    background-size: cover;
+    animation: trainEntry 0.8s ease-out forwards;
+    opacity: 0;
+}
+.classical>h1{
+    margin: 60% auto 1%;
+}
+.classical *{
+    font-style: italic;
+    font-weight: bolder;
+}
+@keyframes trainEntry{
+
+    from{
+        transform: translateX(100vw);
+        opacity: 0;
+    }
+
+    to{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+#unoBTN{
+    border-radius: 50%;
+    border: 3px solid yellow;
+}
+#bottomPlayer>.deck{
+    width: 40%;
+}
+#trophy{
+    display: inline-block;
+    width: 80px;
+    height: 10px;
+    background-color: yellow;
+    border-radius: 10px;
+    margin-bottom: 2%;
+}
+.fa-trophy{
+    font-size: xx-large;
+    margin-bottom: 2%;
+}
+#name>h3{
+    margin: 0%;
+}

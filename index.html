@@ -1,0 +1,211 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UNO Play</title>
+    <link rel="stylesheet" href="./style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css" integrity="sha512-2SwdPD6INVrV/lHTZbO2nodKhrnDdJK9/kg2XD1r9uGqPo1cUbujc+IYdlYdEErWNu69gVcYgdxlmVmzTWnetw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+</head>
+<body>
+    <div id="home">
+        
+        <!-- Home Page Header -->
+        <div id="headDiv">
+            <div id="header">
+                <!-- Back Arrow to go back to previous page -->
+                <div id="backArr" style="display: none;">
+                    <i class="fa-solid fa-left-long"></i>
+                </div>
+
+                <!-- For Classic Mode -->
+                <div id="cMode" style="display: none;">CLASSIC</div>
+
+                <!-- For in opponents choosing mode -->
+                <div id="oppoPage" style="display: none;"></div>
+                <div id="profile" style="background-image: url('./assets/avatar1.png'); background-size: cover; border: 5px solid white;"></div>
+                <div id="name">
+                    <h3>sowmi</h3>
+                    <div>
+                        <i class="fa-solid fa-trophy"></i>
+                        <div id="trophy"></div>
+                    </div>
+                </div>
+                <div class="icon coins">
+                    <span id="coinPic"><i class="fa-solid fa-coins"></i></span>
+                    <span class="text">2,582</span>
+                    <span id="plus"><i class="fa-solid fa-square-plus"></i></span>
+                </div>
+                <div class="icon diamond">
+                    <span id="diamondPic"><i class="fa-solid fa-gem"></i></span>
+                    <span class="text">1</span>
+                    <span id="plus"><i class="fa-solid fa-square-plus"></i></span>
+                </div>
+                <div class="icon bank">
+                    <span id="bankPic"><i class="fa-solid fa-cube"></i></span>
+                    <span class="text">BANK</span>
+                </div>
+                <div id="pass" style="background-image: url('./assets/freePass.jpg'); background-size: cover;">
+                    <h3>Free Pass</h3>
+                </div>
+            </div>
+
+            <!-- Single vs 2v2 Mode Selecting in Header -->
+            <div id="player" style="display: none;">
+                <span class="single play">
+                    <i class="fa-solid fa-user"></i>
+                    <div class="single" style="display: inline;">Single</div>
+                </span>
+                <span class="double play">
+                    <i class="fa-solid fa-user-group"></i>
+                    <div class="double"  style="display: none;">2v2</div>
+                </span>
+            </div>
+        </div>
+
+        <!-- Home Page Center Part -->
+        <div class="main">
+            <div id="msg">
+                <span id="msgPic"><i class="fa-solid fa-comment-dots"></i></span>
+            </div>
+            <div class="card classic">
+                <!-- <h1>UNO</h1>
+                <h2>CLASSIC MODE</h2> -->
+            </div>
+            <div class="card wild">
+                <!-- <h2>GO WILD</h2> -->
+            </div>
+            <div class="card pack">
+                <!-- <h1>UNO</h1>
+                <h2>FUN PACK</h2> -->
+            </div>
+            <div class="card contest">
+                <!-- <h2>UNO CONTEST</h2> -->
+            </div>
+            <div class="card room">
+                <!-- <h2>PLAY WITH FRIENDS</h2> -->
+            </div>
+        </div>
+
+        <!-- Classic Mode "Hidden" -->
+        <div class="main classMode mode" style="display: none;">
+            
+            <div class="card classical first" style="background-color: red;" data-value="classic"><h1>CLASSIC</h1><h2>>=100</h2></div>
+            <div class="card classical" style="background-color: red;" data-value="x4"><h1>x4</h1><h2>>=400</h2></div>
+            <div class="card classical" style="background-color: red;" data-value="x8"><h1>x8</h1><h2>>=800</h2></div>
+            <div class="card classical" style="background-color: red;" data-value="x20"><h1>x20</h1><h2>>=1500</h2></div>
+            <div class="card classical" style="background-color: red;" data-value="x40"><h1>x40</h1><h2>>=3000</h2></div>
+            <div class="card classical" style="background-color: red;" data-value="x80"><h1>x80</h1><h2>>=6000</h2></div>
+            <div class="card classical last" style="background-color: red;" data-value="x200"><h1>x200</h1><h2>>=24000</h2></div>
+        </div>
+
+        <!-- Opponent Page in Main "Hidden" -->
+         <div id="opponentDiv" style="display: none;">
+            <div id="team">
+                <div>
+                    <div class="dp" style="background-image: url('./assets/avatar1.png'); background-size: cover;"></div>
+                    <h3>Sowmi</h3>
+                </div>
+                <div>
+                    <div class="dp" style="background-image: url('./assets/avatar2.png'); background-size: cover;"></div>
+                    <h3>Teammate</h3>
+                </div>
+                <div>
+                    <h1>VS</h1>
+                </div>
+                <div>
+                    <div class="dp" style="background-image: url('./assets/avatar3.jpg'); background-size: cover;"></div>
+                    <h3>Opponent</h3>
+                </div>
+                <div>
+                    <div class="dp" style="background-image: url('./assets/avatar4.png'); background-size: cover;"></div>
+                    <h3>Opponent</h3>
+                </div>
+            </div>
+            <h2>CHOOSE ITEMS</h2>
+         </div>
+
+        <!-- Home Page Footer -->
+        <div id="footerIcons">
+            <div class="set"><i class="fa-solid fa-gear footer"></i><h4>SETTINGS</h4></div>
+            <div class="join">
+                <span><i class="fa-solid fa-comments footer"></i><h4>FRIENDS</h4></span>
+                <span><i class="fa-solid fa-ranking-star footer"></i><h4>LEAGUE</h4></span>
+                <span><i class="fa-solid fa-bucket footer"></i><h4>EVENTS</h4></span>
+                <span><i class="fa-solid fa-book-open footer"></i><h4>COLLECTION</h4></span>
+                <span><i class="fa-solid fa-gem footer"></i><h4>CANVAS</h4></span>
+                <span><i class="fa-solid fa-trophy footer"></i><h4>time</h4></span>
+                <span><i class="fa-solid fa-gift footer"></i><h4>time</h4></span>
+            </div>
+            <div class="str"><i class="fa-solid fa-cart-shopping footer"></i><h4>STORE</h4></div>
+        </div>
+
+        <!-- Classic Mode Footer -->
+        <div id="foot" style="display: none;">
+                <div id="footHigh">Higher Multiplier = Bigger Wins</div>
+                <div id="footQuick">Quick Start Classic x8 Single</div>
+        </div>
+
+        <!-- Opponent choosing page footer -->
+         <div class="oppoFoot" style="display: none;">
+            <div class="extra"></div>
+            <div class="extra"></div>
+         </div>
+         <button class="oppoFoot start" style="display: none;">Start</button>
+        
+    </div>
+
+    <!-- Seperate Gaming Page -->
+    <div id="gamePage" style="display: none;">
+        
+        <!-- Gaming Page Header -->
+        <div id="topPlayer">
+            <div class="avatar">
+                <div style="background-image: url('./assets/avatar2.png'); background-size: cover;"></div>
+                <h3>Teammate</h3>
+            </div>
+            <div class="deck"></div>
+        </div>
+
+        <!-- Gaming Page in Main "Hidden" -->
+        <div id="middlePlayer">
+            <div id="leftPlayer">
+                <div class="avatar">
+                    <div style="background-image: url('./assets/avatar3.jpg'); background-size: cover;"></div>
+                    <h3>Opponent</h3>
+                </div>
+                <div class="deck"></div>
+            </div>
+            <div id="centerPart">
+                <div id="drawDeck"></div>
+                <div id="discardDeck"></div>
+                <div id="colorPick" style="display: none;">
+                    <div id="red" class="clrDiv" data-index="0"></div>
+                    <div id="yellow" class="clrDiv" data-index="1"></div>
+                    <div id="green" class="clrDiv" data-index="2"></div>
+                    <div id="blue" class="clrDiv" data-index="3"></div>
+                </div>
+            </div>
+            <div id="rightPlayer">
+                <div class="avatar">
+                    <div style="background-image: url('./assets/avatar4.png'); background-size: cover;"></div>
+                    <h3>Opponent</h3>
+                </div>
+                <div class="deck"></div>
+            </div>
+        </div>
+
+        <!-- Gaming Page in Footer "Hidden"-->
+        <div id="bottomPlayer">
+            <div class="avatar">
+                <div style="background-image: url('./assets/avatar1.png'); background-size: cover;"></div>
+                <h3>Sowmi</h3>
+            </div>
+            <div class="deck"></div>
+            <div id="unoBTN" style="background-image: url('./assets/uno_button.jpg'); background-size: cover;"></div>
+        </div>
+    </div>
+    <script src="./main.js"></script>
+</body>
+</html>
